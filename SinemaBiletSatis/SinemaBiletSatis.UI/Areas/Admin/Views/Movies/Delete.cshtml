@@ -1,0 +1,57 @@
+﻿@model SinemaBiletSatis.Entities.Film
+
+@{
+    ViewData["Title"] = "Film Sil";
+}
+
+<h1>Film Sil</h1>
+
+<h3>Filmi silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Film</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilmAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilmAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sure)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sure)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yonetmen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yonetmen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AltyaziVarMi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AltyaziVarMi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dil)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Dön</a>
+    </form>
+</div>

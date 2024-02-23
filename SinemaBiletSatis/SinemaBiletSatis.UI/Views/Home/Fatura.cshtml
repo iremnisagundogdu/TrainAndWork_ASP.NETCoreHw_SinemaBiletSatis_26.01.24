@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Fatura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Fatura</h1>
+
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1>Order</h1>
+
+<div id="iyzipay-checkout-form" class="responsive">
+</div>
+@Html.Raw(ViewBag.pay)

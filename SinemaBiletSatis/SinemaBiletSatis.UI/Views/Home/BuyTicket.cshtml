@@ -1,0 +1,19 @@
+﻿@model SinemaBiletSatis.Entities.BuyTicketViewModel
+
+@{
+    ViewData["Title"] = "BuyTicket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="mt-5 mb-4"> @Model.MovieTitle</h2>
+
+    <form asp-action="BuyTicket" method="post">
+        
+        <h2>@Model.UserName</h2>
+        <input type="hidden" name="MovieId" value="@Model.MovieId">
+        <input type="hidden" name="UserId" value="@Model.UserId">
+
+        <button type="submit" class="btn btn-primary">Bilet Satın Al</button>
+    </form>
+</div>
